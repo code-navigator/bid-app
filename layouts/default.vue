@@ -80,13 +80,14 @@
       </v-list>
     </v-navigation-drawer>
     <c-footer>
-      <span>&copy; {{ new Date().getFullYear() }} Cygnus, Inc.</span>
+      <span>&copy; {{ year }} {{ companyName }}</span>
     </c-footer>
   </v-app>
 </template>
 
 <script>
-import c_Footer from "@/components/c_Footer.vue";
+import c_Footer from "@/components/c_Footer";
+import { mapGetters } from "vuex";
 
 export default {
   components: {
@@ -114,6 +115,12 @@ export default {
       rightDrawer: false,
       title: "Vuetify.js",
     };
+  },
+  computed: {
+    ...mapGetters({
+      companyName: 'app/getCompanyName',
+      year: 'app/getYear'
+    }),
   },
 };
 </script>
