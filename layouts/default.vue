@@ -86,11 +86,11 @@
 </template>
 
 <script>
-import c_footer from "@/components/c_footer.vue";
+import c_Footer from "@/components/c_Footer.vue";
 
 export default {
   components: {
-    c_footer,
+    c_Footer,
   },
   data() {
     return {
