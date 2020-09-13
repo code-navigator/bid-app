@@ -1,19 +1,14 @@
-<template>
-  <v-layout
-    column
-    justify-center
-    align-center
-  >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
+<template lang="pug">
+  v-row(
+    class="xs12 sm8 md6"
+    justify="center"
+    align-content="center"
+  )
 
-    </v-flex>
-  </v-layout>
+    v-col
+      p Column 1
+
+    v-col
+      p Column 2
 </template>
 
-<script>
-export default {};
-</script>
