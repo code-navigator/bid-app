@@ -1,14 +1,24 @@
 <template lang="pug">
-  v-row(
-    class="xs12 sm8 md6"
-    justify="center"
-    align-content="center"
+  splitpanes(
+    class="default-theme"
+    vertical
+    style="min-height: 100%;"
   )
-
-    v-col
-      p Column 1
-
-    v-col
-      p Column 2
+    pane(size="20")
+      span 1
+    pane(size="80")
+      span 2
 </template>
+
+<script>
+import { Splitpanes, Pane } from 'splitpanes'
+import 'splitpanes/dist/splitpanes.css'
+
+export default {
+  components: {
+    Splitpanes,
+    Pane
+  }
+}
+</script>
 

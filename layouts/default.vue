@@ -13,7 +13,7 @@
 
     //- Inject pages here
     v-main
-      v-container
+      v-container(fluid)
         nuxt
 
     v-footer(
