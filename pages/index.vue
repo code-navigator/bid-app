@@ -2,7 +2,6 @@
   splitpanes(
     class="default-theme"
     vertical
-    style="min-height: 100%;"
   )
     pane(size="20")
       span 1

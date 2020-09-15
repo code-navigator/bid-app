@@ -13,7 +13,7 @@
 
     //- Inject pages here
     v-main
-      v-container(fluid)
+      v-container.fill-height(fluid)
         nuxt
 
     v-footer(
