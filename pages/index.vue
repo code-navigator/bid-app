@@ -20,15 +20,18 @@
             v-row(no-gutters)
               v-col(cols="12")
                 v-text-field(
+                  clearable
                   dense
                   full-width
                   outlined
                   prepend-inner-icon="mdi-magnify"
                   single-line
+                  v-model="search"
                 )
                 v-treeview(
                   dense
                   :items="items"
+                  :search="search"
                 )
 
         pane(size="50")
@@ -49,6 +52,7 @@ export default {
     Pane
   },
   data: () => ({
+      search: '',
       items: [
         {
           id: 1,
