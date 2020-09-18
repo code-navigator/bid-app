@@ -29,13 +29,79 @@
                   v-model="search"
                 )
                 v-treeview(
+                  activatable
                   dense
                   :items="items"
                   :search="search"
                 )
 
-        pane(size="50")
-          span 1b
+        pane(
+          size="50"
+          style="overflow: auto;"
+        )
+          v-container
+            v-row(no-gutters)
+              v-col(cols="12")
+                v-combobox(
+                  v-model="select"
+                  :items="cbitems"
+                  label="Customer"
+                  outlined
+                  dense
+                )
+                v-combobox(
+                  v-model="select"
+                  :items="cbitems"
+                  label="Program"
+                  outlined
+                  dense
+                )
+                v-text-field(
+                  label="RFQ Numbers"
+                  outlined
+                  placeholder="Enter RFQ"
+                  dense
+                )
+                v-text-field(
+                  label="Number of Deliveries"
+                  outlined
+                  placeholder="Enter Deliveries"
+                  dense
+                )
+            v-row
+              v-col(cols="6")
+                v-text-field(
+                  label="Months to First Delivery"
+                  outlined
+                  placeholder="Enter Deliveries"
+                  dense
+                )
+              v-col(cols="6")
+                v-text-field(
+                  label="Months to Last Delivery"
+                  outlined
+                  placeholder="Enter Deliveries"
+                  dense
+                )
+            v-row
+              v-col(cols=12)
+                v-textarea(
+                  dense
+                  outlined
+                  name="input-7-4"
+                  placeholder="Enter or copy & paste in a list of part numbers"
+                  label="Part Numbers"
+                  value=""
+                )
+
+                v-btn(
+                  class="mx-2"
+                  small
+                  fab
+                  dark
+                  color="indigo"
+                )
+                  v-icon(dark) mdi-plus
 
     pane(size="80")
       span 2
@@ -53,6 +119,8 @@ export default {
   },
   data: () => ({
       search: '',
+      select:[],
+      cbitems:[],
       items: [
         {
           id: 1,
