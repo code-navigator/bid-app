@@ -7,6 +7,29 @@
 
     pane(size="20")
 
+      v-container.pt-0(fluid)
+        v-row
+          v-col(
+            cols="12"
+            style="padding: 0px;"
+          )
+            v-system-bar.d-flex.justify-space-around(
+              color="primary"
+              window
+              dark
+              style="padding: 0px;"
+            )
+              v-btn(
+                text
+                small
+                color="search"
+              ) TEST
+              v-btn(
+                text
+                small
+                color="search"
+              ) TEST
+
       splitpanes(
         class="default-theme"
         horizontal
