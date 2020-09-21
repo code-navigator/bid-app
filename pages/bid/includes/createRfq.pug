@@ -1,0 +1,54 @@
+v-container
+  v-row(no-gutters)
+    v-col(cols="12")
+      v-combobox(
+        :items="[]"
+        dense
+        label="Customer"
+        outlined
+        placeholder="Select Customer"
+        v-model="select"
+      )
+      v-combobox(
+        :items="[]"
+        dense
+        label="Program"
+        outlined
+        placeholder="Select Program"
+        v-model="select"
+      )
+      v-text-field(
+        dense
+        label="RFQ Number"
+        outlined
+        placeholder="Enter RFQ Number"
+      )
+      v-text-field(
+        dense
+        label="Number of Deliveries"
+        outlined
+        placeholder="Enter Deliveries"
+        type="number"
+      )
+      v-text-field(
+        dense
+        label="Months to First Delivery"
+        outlined
+        placeholder="Months to First"
+        type="number"
+      )
+      v-text-field(
+        dense
+        label="Months to Last Delivery"
+        outlined
+        placeholder="Months to Last"
+        type="number"
+      )
+      v-btn.mx-2(
+        depressed
+        fab
+        dark
+        small
+        color="primary"
+      )
+        v-icon(dark) mdi-plus

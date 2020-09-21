@@ -1,54 +1,3 @@
-<template lang="pug">
-
-  splitpanes(
-    class="default-theme"
-    vertical
-  )
-
-    pane(size="20")
-      v-tabs(v-model="tab")
-        v-tab Search
-        v-tab Other
-      v-tabs-items(v-model="tab")
-        v-tab-item
-          splitpanes(
-            class="default-theme"
-            horizontal
-          )
-
-            pane(
-              size="50"
-              style="overflow: auto;"
-            )
-              v-container(style="overflow: auto;")
-                v-row(no-gutters)
-                  v-col(cols="12")
-                    v-text-field(
-                      clearable
-                      dense
-                      full-width
-                      outlined
-                      prepend-inner-icon="mdi-magnify"
-                      single-line
-                      v-model="search"
-                    )
-                    v-treeview(
-                      dense
-                      :items="items"
-                      :search="search"
-                    )
-
-            pane(size="50")
-              v-container
-                span 1b
-
-
-    pane(size="80")
-      span 2
-
-</template>
-
-<script>
 import { Splitpanes, Pane } from 'splitpanes'
 import 'splitpanes/dist/splitpanes.css'
 
@@ -59,7 +8,12 @@ export default {
   },
   data: () => ({
       search: '',
-      tab: '',
+      select: '',
+      customers: [
+        'Boeing',
+        'Lockheed',
+        'Northrop Grumman'
+      ],
       items: [
         {
           id: 1,
@@ -134,17 +88,3 @@ export default {
       ],
     }),
 }
-</script>
-
-<style>
-.v-treeview--dense
-.v-treeview-node__root {
-  min-height: 0px;
-}
-
-.v-window__container {
-  height: 81vh;
-  display:grid;
-}
-</style>
-
