@@ -1,0 +1,29 @@
+splitpanes(
+  class="default-theme"
+  vertical
+)
+
+  pane(size="20")
+    include includes/toolbar.pug
+
+    splitpanes(
+      class="default-theme"
+      horizontal
+    )
+
+      pane(
+        size="50"
+        style="overflow: auto;"
+      )
+        include includes/searchRfq.pug
+
+      pane(
+        size="50"
+        min-size="5"
+        style="overflow: auto;"
+      )
+        include includes/createRfq.pug
+
+  pane(size="80")
+    span 2
+

@@ -1,0 +1,26 @@
+//- Pane 1
+pane(size="20")
+
+  v-container.pt-0(fluid)
+    v-row
+      v-col(
+        cols="12"
+        style="padding: 0px;"
+      )
+
+        includes include/toolbar.pug
+
+  splitpanes(
+    class="default-theme"
+    horizontal
+  )
+
+    pane(
+      size="50"
+      style="overflow: auto;"
+    )
+      includes search.pug
+
+    pane(size="50")
+      span 1b
+

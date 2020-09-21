@@ -1,0 +1,30 @@
+v-container
+  v-row(no-gutters)
+    v-col(cols="12")
+      v-text-field(
+        clearable
+        dense
+        full-width
+        outlined
+        prepend-inner-icon="mdi-magnify"
+        single-line
+        v-model="search"
+      )
+      v-treeview(
+        activatable
+        dense
+        :items="items"
+        :search="search"
+        selectable
+        selection-type="leaf"
+      )
+  v-row(align-content="end")
+    v-col
+      v-btn.mx-2(
+        fab
+        dark
+        depressed
+        small
+        color="primary"
+      )
+        v-icon(dark) mdi-minus

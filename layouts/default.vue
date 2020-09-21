@@ -3,6 +3,7 @@
   v-app
 
     v-app-bar(
+      dense
       fixed
       app
     )
