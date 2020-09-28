@@ -7,6 +7,16 @@ export default {
     Pane
   },
   data: () => ({
+    thead: [
+      'E-Bid Order Qty',
+      'E-Bid Release Qty',
+      'No. Of Deliveries',
+      'Mo. to First Del. 4',
+      'Mo. to Last Del.'
+    ],
+    tbody: [
+      ['R:1 V:1', 'R:1 V:2', 'R:1 V:3', 'R:1 V:4', 'R:1 V:5']
+    ],
       search: '',
       select: '',
       customers: [
@@ -17,74 +27,57 @@ export default {
       items: [
         {
           id: 1,
-          name: 'Applications :',
+          name: 'Boeing :',
           children: [
-            { id: 2, name: 'Calendar : app' },
-            { id: 3, name: 'Chrome : app' },
-            { id: 4, name: 'Webstorm : app' },
+            { id: 2, name: 'F-15', children:[
+              {
+                id: 5,
+                name: 'RFQ 000',
+                children:[
+                  {
+                    id: 6,
+                    name: 'Part -001'
+                  }
+                ]
+              }
+            ] },
+            { id: 3, name: 'F-18' },
+            { id: 4, name: 'V-22' },
           ],
         },
         {
-          id: 5,
-          name: 'Documents :',
+          id: 7,
+          name: 'Northrop :',
           children: [
-            {
-              id: 6,
-              name: 'vuetify :',
-              children: [
-                {
-                  id: 7,
-                  name: 'src :',
-                  children: [
-                    { id: 8, name: 'index : ts' },
-                    { id: 9, name: 'bootstrap : ts' },
-                  ],
-                },
-              ],
-            },
-            {
-              id: 10,
-              name: 'material2 :',
-              children: [
-                {
-                  id: 11,
-                  name: 'src :',
-                  children: [
-                    { id: 12, name: 'v-btn : ts' },
-                    { id: 13, name: 'v-card : ts' },
-                    { id: 14, name: 'v-window : ts' },
-                  ],
-                },
-              ],
-            },
+            { id: 8, name: 'F-18', children:[
+              {
+                id: 9,
+                name: 'RFQ 000',
+                children:[
+                  {
+                    id: 10,
+                    name: 'Part -001'
+                  }
+                ]
+              }
+            ] },
+            { id: 11, name: 'F-35' },
+            { id: 12, name: 'Global Hawk' },
           ],
-        },
-        {
-          id: 15,
-          name: 'Downloads :',
-          children: [
-            { id: 16, name: 'October : pdf' },
-            { id: 17, name: 'November : pdf' },
-            { id: 18, name: 'Tutorial : html' },
-          ],
-        },
-        {
-          id: 19,
-          name: 'Videos :',
-          children: [
-            {
-              id: 20,
-              name: 'Tutorials :',
-              children: [
-                { id: 21, name: 'Basic layouts : mp4' },
-                { id: 22, name: 'Advanced techniques : mp4' },
-                { id: 23, name: 'All about app : dir' },
-              ],
-            },
-            { id: 24, name: 'Intro : mov' },
-            { id: 25, name: 'Conference introduction : avi' },
-          ],
-        },
-      ],
+        }
+      ]
     }),
+  methods: {
+    addRow: function() {
+      console.log('test')
+      var newRow = [];
+
+      for(var i = 0, length = this.thead.length; i < length; i++) {
+        newRow.push('R:' + (this.tbody.length + 1) + ' V:' + (i + 1))
+      }
+
+      this.tbody.push(newRow);
+
+    }
+  }
 }
