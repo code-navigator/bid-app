@@ -1,5 +1,26 @@
-v-container
-  v-row(no-gutters)
+v-container.mt-0.pt-0(fluid)
+  v-row
+    v-col(
+      cols="12"
+      style="padding: 0px;"
+    )
+      v-system-bar.d-flex.justify-space-around(
+        color="primary"
+        window
+        dark
+        style="padding: 0px;"
+      )
+        v-btn(
+          text
+          small
+          color="search"
+        ) Add
+        v-btn(
+          text
+          small
+          color="search"
+        ) Remove
+  v-row.mt-5(no-gutters)
     v-col(cols="12")
       v-text-field(
         clearable
@@ -18,13 +39,3 @@ v-container
         selectable
         selection-type="leaf"
       )
-  v-row(align-content="end")
-    v-col
-      v-btn.mx-2(
-        fab
-        dark
-        depressed
-        small
-        color="primary"
-      )
-        v-icon(dark) mdi-minus

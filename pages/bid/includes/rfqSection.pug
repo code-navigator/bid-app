@@ -1,0 +1,60 @@
+v-card.pt-0.pb-0(
+  width="100%"
+  outlined
+)
+  v-system-bar.d-flex.justify-space-around(
+        color="primary"
+        window
+        dark
+        style="padding: 0px"
+      )
+  v-row
+    v-col(cols="2")
+      v-text-field.ml-3(
+        dense
+        label="Customer"
+        outlined
+      )
+    v-col(cols="2")
+      v-text-field(
+        dense
+        label="Program"
+        outlined
+      )
+    v-col(cols="2")
+      v-text-field(
+        dense
+        label="RFQ Number"
+        outlined
+      )
+    v-col(cols="2")
+      v-text-field(
+        dense
+        label="Part Number"
+        outlined
+      )
+    v-col(cols="1")
+      v-text-field(
+        dense
+        label="Revision"
+        outlined
+      )
+
+  v-simple-table(dense)
+    template(v-slot:default)
+      thead
+        tr
+          th(v-for="(heading, index) in thead") {{ heading }}
+      tbody
+        tr(v-for="row in tbody")
+          td(
+            v-for="(value, index) in row"
+          )
+            input(
+              type="text"
+              v-model="row[index]"
+            )
+        tr
+          v-btn(
+            @click="addRow"
+          ) +

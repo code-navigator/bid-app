@@ -4,26 +4,29 @@ splitpanes(
 )
 
   pane(size="20")
-    include includes/toolbar.pug
+    include includes/searchRfq.pug
 
+  pane(size="80")
     splitpanes(
       class="default-theme"
       horizontal
     )
-
       pane(
-        size="50"
-        style="overflow: auto;"
+        size="22"
+        style="overflow-y: auto;"
       )
-        include includes/searchRfq.pug
+        include includes/rfqSection.pug
+      pane(size="78")
+        v-tabs(
+          background-color="primary"
+          grow
+          slider-color="yellow"
+          style="height: 36px;"
+        )
+          v-tab Raw Material
+          v-tab Fabrication
+          v-tab Processing
+          v-tab Assembly
+          v-tab Shipping
 
-      pane(
-        size="50"
-        min-size="5"
-        style="overflow: auto;"
-      )
-        include includes/createRfq.pug
-
-  pane(size="80")
-    span 2
 

@@ -3,6 +3,8 @@
   v-app
 
     v-app-bar(
+      color="primary"
+      dark
       dense
       fixed
       app
