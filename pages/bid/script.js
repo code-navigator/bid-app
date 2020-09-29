@@ -7,6 +7,8 @@ export default {
     Pane
   },
   data: () => ({
+    materials:['2024 O BR .063', '7075 T6 CL .050'],
+    tab: null,
     thead: [
       'E-Bid Order Qty',
       'E-Bid Release Qty',

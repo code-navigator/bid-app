@@ -3,10 +3,10 @@ splitpanes(
   vertical
 )
 
-  pane(size="20")
+  pane(size="15")
     include includes/searchRfq.pug
 
-  pane(size="80")
+  pane(size="85")
     splitpanes(
       class="default-theme"
       horizontal
@@ -22,11 +22,22 @@ splitpanes(
           grow
           slider-color="yellow"
           style="height: 36px;"
+          v-model="tab"
         )
-          v-tab Raw Material
+          v-tab Material
           v-tab Fabrication
           v-tab Processing
           v-tab Assembly
           v-tab Shipping
-
+        v-tabs-items(v-model="tab")
+          v-tab-item
+            include includes/material.pug
+          v-tab-item
+            p Fabrication Section
+          v-tab-item
+            p Processing Section
+          v-tab-item
+            p Assembly Section
+          v-tab-item
+            p Shipping Section
 

@@ -1,5 +1,5 @@
 export const state = () => ({
-  applicationName: 'OutBid',
+  applicationName: 'cBid',
   companyName: 'Cygnus, Inc.'
 })
 
