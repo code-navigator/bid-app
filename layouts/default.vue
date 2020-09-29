@@ -3,7 +3,7 @@
   v-app
 
     v-app-bar(
-      color="primary"
+      color="$blue"
       dark
       dense
       fixed
