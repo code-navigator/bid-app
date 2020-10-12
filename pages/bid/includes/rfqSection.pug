@@ -3,12 +3,12 @@ v-card.pt-0.pb-0(
   outlined
 )
   v-system-bar.d-flex.justify-space-around(
-    color="$blue"
+    color="black"
     window
     dark
     style="padding: 0px"
   )
-  v-row
+  v-row(style="height: 60px;")
     v-col(cols="2")
       v-text-field.ml-3(
         dense
@@ -39,7 +39,6 @@ v-card.pt-0.pb-0(
         label="Revision"
         outlined
       )
-
   v-simple-table(dense)
     template(v-slot:default)
       thead
@@ -58,3 +57,6 @@ v-card.pt-0.pb-0(
           v-btn(
             @click="addRow"
           ) +
+          v-btn(
+            @click="removeRow"
+          ) -

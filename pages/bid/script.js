@@ -80,6 +80,9 @@ export default {
 
       this.tbody.push(newRow);
 
+    },
+    removeRow: function() {
+
     }
   }
 }
