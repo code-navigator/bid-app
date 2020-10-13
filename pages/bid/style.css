@@ -2,4 +2,13 @@
 .v-treeview-node__root {
   min-height: 0px;
 }
+.v-text-field--outlined.v-input--dense .v-label--active {
+  transform: translateY(-11px) scale(0.75) !important;
+}
+.v-text-field--outlined.v-input--dense .v-label  {
+  top: 5px !important;
+}
+.v-text-field__slot > input {
+  text-transform: uppercase;
+}
 

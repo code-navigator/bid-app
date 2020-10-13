@@ -9,35 +9,41 @@ v-card.pt-0.pb-0(
     style="padding: 0px"
   )
   v-row(style="height: 60px;")
-    v-col(cols="2")
+    v-col.pt-2.px-2(cols="2")
       v-text-field.ml-3(
         dense
-        label="Customer"
+        label="CUSTOMER"
         outlined
+        hide-details="auto"
+        text-uppercase
       )
-    v-col(cols="2")
+    v-col.pt-2.px-2(cols="2")
       v-text-field(
         dense
-        label="Program"
+        label="PROGRAM"
         outlined
+        hide-details="auto"
       )
-    v-col(cols="2")
+    v-col.pt-2.px-2(cols="2")
       v-text-field(
         dense
-        label="RFQ Number"
+        label="RFQ NUMBER"
         outlined
+        hide-details="auto"
       )
-    v-col(cols="2")
+    v-col.pt-2.px-2(cols="2")
       v-text-field(
         dense
-        label="Part Number"
+        label="PART NUMBER"
         outlined
+        hide-details="auto"
       )
-    v-col(cols="1")
+    v-col.pt-2.px-2(cols="1")
       v-text-field(
         dense
-        label="Revision"
+        label="REVISION"
         outlined
+        hide-details="auto"
       )
   v-simple-table(dense)
     template(v-slot:default)
