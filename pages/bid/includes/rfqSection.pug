@@ -9,6 +9,7 @@ v-card.pt-0.pb-0(
     style="padding: 0px"
   )
   v-row(style="height: 60px;")
+<<<<<<< HEAD
     v-col.pa-1.ml-3(cols="2")
       baseText(
         label="Customer"
@@ -28,6 +29,43 @@ v-card.pt-0.pb-0(
     v-col.pa-1(cols="2")
       baseText(
         label="Revision"
+=======
+    v-col.pt-2.px-2(cols="2")
+      v-text-field.ml-3(
+        dense
+        label="CUSTOMER"
+        outlined
+        hide-details="auto"
+        text-uppercase
+      )
+    v-col.pt-2.px-2(cols="2")
+      v-text-field(
+        dense
+        label="PROGRAM"
+        outlined
+        hide-details="auto"
+      )
+    v-col.pt-2.px-2(cols="2")
+      v-text-field(
+        dense
+        label="RFQ NUMBER"
+        outlined
+        hide-details="auto"
+      )
+    v-col.pt-2.px-2(cols="2")
+      v-text-field(
+        dense
+        label="PART NUMBER"
+        outlined
+        hide-details="auto"
+      )
+    v-col.pt-2.px-2(cols="1")
+      v-text-field(
+        dense
+        label="REVISION"
+        outlined
+        hide-details="auto"
+>>>>>>> dd8e4c9f6e3e99a1cb373c407b055cb3a9a58498
       )
   v-simple-table(dense)
     template(v-slot:default)
