@@ -1,10 +1,16 @@
 import { Splitpanes, Pane } from 'splitpanes'
 import 'splitpanes/dist/splitpanes.css'
+import baseText from '@/components/baseText'
+import baseCombo from '@/components/baseCombo'
+import baseTabs from '@/components/baseTabs'
 
 export default {
   components: {
     Splitpanes,
-    Pane
+    Pane,
+    baseText,
+    baseCombo,
+    baseTabs
   },
   data: () => ({
     materials:['2024 O BR .063', '7075 T6 CL .050'],
@@ -71,7 +77,6 @@ export default {
     }),
   methods: {
     addRow: function() {
-      console.log('test')
       var newRow = [];
 
       for(var i = 0, length = this.thead.length; i < length; i++) {
@@ -82,7 +87,11 @@ export default {
 
     },
     removeRow: function() {
-
+      this.tbody.splice(-1, 1)
+    },
+    clickTab: function (newtab) {
+      console.log(newtab)
+      this.tab = newtab
     }
   }
 }

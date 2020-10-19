@@ -17,15 +17,7 @@ splitpanes(
       )
         include includes/rfqSection.pug
       pane(size="75")
-        v-tabs(
-          dark
-          background-color="black"
-          color="white"
-          grow
-          slider-color="yellow"
-          style="height: 36px;"
-          v-model="tab"
-        )
+        baseTabs(:tab="tab" @click="clickTab")
           v-tab Material
           v-tab Fabrication
           v-tab Processing
