@@ -2,7 +2,7 @@
 v-text-field.ma-0.pa-0(
   :label="label"
   dense
-  hide-details
+  hide-details="auto"
   outlined
 )
 </template>

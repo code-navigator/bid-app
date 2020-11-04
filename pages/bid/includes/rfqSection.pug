@@ -8,30 +8,34 @@ v-card.pt-0.pb-0(
     dark
     style="padding: 0px"
   )
-  v-row(style="height: 60px;")
-    v-col.pa-1.ml-3(cols="2")
+  baseRow
+    baseCol.pl-3(cols="2")
       baseText(
         label="Customer"
       )
-    v-col.pa-1(cols="2")
+    baseCol(cols="1")
       baseText(
         label="Program"
       )
-    v-col.pa-1(cols="2")
+    baseCol(cols="2")
       baseText(
         label="RFQ Number"
       )
-    v-col.pa-1(cols="2")
+    baseCol(cols="2")
       baseText(
         label="Part Number"
       )
-    v-col.pa-1(cols="2")
+    baseCol(cols="2")
       baseText(
         label="Revision"
       )
+    baseCol(cols="2")
+      baseText(
+        label="Part Name"
+      )
   v-simple-table(dense)
-    template(v-slot:default)
-      thead
+    template.pa-0.ma-0(v-slot:default)
+      thead.pa-0.ma-0
         tr
           th(v-for="(heading, index) in thead") {{ heading }}
       tbody

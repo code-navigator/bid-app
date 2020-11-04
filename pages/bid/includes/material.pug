@@ -1,16 +1,25 @@
 div
-  v-row.pt-0.pb-0
-    v-col.pt-0.pb-0(cols="2")
+  baseRow
+    baseCol.pl-3(cols="2")
+      baseText(
+        label="Part Width"
+      )
+    baseCol(cols="2")
+      baseText(
+        label="Part Length"
+      )
+  baseRow
+    baseCol.pl-3(cols="2")
       baseCombo(
         :items="materials"
         label="Material"
       )
-    v-col.pt-0.pb-0(cols="2")
+    baseCol(cols="2")
       baseCombo(
         :items="materials"
         label="Unit of Measures"
       )
-    v-col.pt-0.pb-0(cols="2")
+    baseCol(cols="2")
       baseText(
         label="Price"
       )

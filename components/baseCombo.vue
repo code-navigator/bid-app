@@ -6,6 +6,7 @@ v-autocomplete.pt-0.pb-0(
   dense
   hide-details
   outlined
+  height="20"
 )
 </template>
 

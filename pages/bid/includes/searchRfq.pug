@@ -20,18 +20,21 @@ v-container.mt-0.pt-0(fluid)
           small
           color="search"
         ) Remove
-  v-row.mt-5(no-gutters)
+  v-row.mt-2(no-gutters)
     v-col(cols="12")
       v-text-field(
         clearable
         dense
         full-width
         outlined
+        hide-details="auto"
         prepend-inner-icon="mdi-magnify"
         single-line
         v-model="search"
+        @input="handleSearch"
       )
       v-treeview(
+        ref="tree"
         activatable
         dense
         :items="items"

@@ -3,6 +3,8 @@ import 'splitpanes/dist/splitpanes.css'
 import baseText from '@/components/baseText'
 import baseCombo from '@/components/baseCombo'
 import baseTabs from '@/components/baseTabs'
+import baseCol from '@/components/baseCol'
+import baseRow from '@/components/baseRow'
 
 export default {
   components: {
@@ -10,7 +12,9 @@ export default {
     Pane,
     baseText,
     baseCombo,
-    baseTabs
+    baseTabs,
+    baseCol,
+    baseRow
   },
   data: () => ({
     materials:['2024 O BR .063', '7075 T6 CL .050'],
@@ -26,6 +30,9 @@ export default {
       ['R:1 V:1', 'R:1 V:2', 'R:1 V:3', 'R:1 V:4', 'R:1 V:5']
     ],
       search: '',
+      open: [1],
+      allOpened: false,
+      lastOpen: [],
       select: '',
       customers: [
         'Boeing',
@@ -92,6 +99,19 @@ export default {
     clickTab: function (newtab) {
       console.log(newtab)
       this.tab = newtab
+    },
+    handleSearch: function (val) {
+      if (val) {
+        if (!this.allOpened) {
+          this.lastOpen = this.open;
+          this.allOpened = true;
+          this.$refs.tree.updateAll(true);
+        }
+      } else {
+        this.$refs.tree.updateAll(false);
+        this.allOpened = false;
+        this.open = this.lastOpen;
+      }
     }
   }
 }
