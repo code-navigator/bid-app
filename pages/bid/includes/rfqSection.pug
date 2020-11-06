@@ -1,7 +1,4 @@
-v-card.pt-0.pb-0(
-  width="100%"
-  outlined
-)
+baseCard
   v-system-bar.d-flex.justify-space-around(
     color="black"
     window
@@ -47,10 +44,11 @@ v-card.pt-0.pb-0(
               type="text"
               v-model="row[index]"
             )
-        tr
-          v-btn(
-            @click="addRow"
-          ) +
-          v-btn(
-            @click="removeRow"
-          ) -
+
+  baseButton(
+    @click="addRow"
+  ) +
+
+  baseButton(
+    @click="removeRow"
+  ) -

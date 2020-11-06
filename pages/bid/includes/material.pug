@@ -1,4 +1,4 @@
-div
+baseCard
   baseRow
     baseCol.pl-3(cols="2")
       baseText(
@@ -8,18 +8,35 @@ div
       baseText(
         label="Part Length"
       )
-  baseRow
+  baseRow(v-for="(material,i) in materials")
     baseCol.pl-3(cols="2")
       baseCombo(
         :items="materials"
         label="Material"
       )
-    baseCol(cols="2")
-      baseCombo(
-        :items="materials"
-        label="Unit of Measures"
-      )
-    baseCol(cols="2")
-      baseText(
-        label="Price"
-      )
+    v-spacer
+    baseCol(cols="8")
+      v-simple-table(dense)
+        template.pa-0.ma-0(v-slot:default)
+          thead.pa-0.ma-0
+            tr
+              th(v-for="(heading, index) in materialTableHeader") {{ heading }}
+          tbody
+            tr(v-for="row in tbody")
+              td(
+                v-for="(value, index) in row"
+              )
+                input(
+                  type="text"
+                  v-model="row[index]"
+                )
+      baseButton(
+        @click="addRow"
+      ) + Add Qty Break
+
+      baseButton(
+        @click="removeRow"
+      ) - Remove Qty Break
+
+      hr.mt-5
+

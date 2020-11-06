@@ -18,3 +18,10 @@ v-autocomplete.pt-0.pb-0(
     ]
   }
 </script>
+
+<style>
+.v-icon.v-icon.v-icon--link {
+  top: -7px;
+  font-size: 15px;
+}
+</style>

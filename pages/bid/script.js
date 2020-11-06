@@ -5,6 +5,8 @@ import baseCombo from '@/components/baseCombo'
 import baseTabs from '@/components/baseTabs'
 import baseCol from '@/components/baseCol'
 import baseRow from '@/components/baseRow'
+import baseButton from '@/components/baseButton'
+import baseCard from '@/components/baseCard'
 
 export default {
   components: {
@@ -14,10 +16,21 @@ export default {
     baseCombo,
     baseTabs,
     baseCol,
-    baseRow
+    baseRow,
+    baseButton,
+    baseCard
   },
   data: () => ({
     materials:['2024 O BR .063', '7075 T6 CL .050'],
+    materialTableHeader: [
+      'Quantity',
+      'UOM',
+      'Scrap',
+      'Price',
+      'Freight',
+      'Mark Up'
+    ],
+    materialTableBody: [],
     tab: null,
     thead: [
       'E-Bid Order Qty',
